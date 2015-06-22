@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foundation for Apps</title>
+  <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+  <link href="http://www.horizonhobby.com/wcsstore/AuroraStorefrontAssetStore/css/default.css" rel="stylesheet">
+  <script src="./assets/js/foundation.js"></script>
+  <script src="./assets/js/templates.js"></script>
+  <script src="./assets/js/routes.js"></script>
+  <script src="./assets/js/jquery.js"></script>
+</head>
+<body>
+<zf-offcanvas id="menu" position="left">
+  <div class="grid-content">
+    <p style="padding-bottom: 1rem;"><a class="close-button" zf-close="" href="#">×</a></p>
+    <section class="block-list">
+      <header>TFS Paths</header>
+      <ul>
+        <li><a href="/category-pages/header-cat-identifier" data-bool=true zf-close="menu"><img zf-iconic="" icon="action" size="small" class="iconic-color-dark">header-cat-identifier</a></li>
+        <li><a href="/toplevelcategorypage" data-bool=false zf-close="menu"><img zf-iconic="" icon="action" size="small" class="iconic-color-dark">toplevelcategorypage</a></li>
+        <li><a href="/homepage" zf-close="menu"><img zf-iconic="" icon="action" size="small" class="iconic-color-dark">homepage</a></li>
+      </ul>
+    </section>
+    <section class="block-list" style="-webkit-app-region: no-drag">
+      <header>CMC</header>
+      <ul>
+        <li><a href="dbquery" zf-close="menu"><img zf-iconic="" icon="action" size="small" class="iconic-color-dark">Query for e-spot positions</a></li>
+      </ul>
+    </section>
+    <section class="block-list" style="-webkit-app-region: no-drag">
+      <header>Utility</header>
+      <ul>
+        <li><a zf-toggle="settings" zf-close="menu"><img zf-iconic="" icon="cog" size="small" class="iconic-color-dark">Settings</a></li>
+        <li><a href="#dev-tools" zf-close="menu"><img zf-iconic="" icon="account" size="small" class="iconic-color-dark">Dev Tools</a></li>
+      </ul>
+    </section>
+  </div>
+
+</zf-offcanvas>
+<div class="grid-frame vertical">
+  <div class="grid-content shrink collapse">
+    <div class="dark title-bar">
+      <div class="center title"><a href="#drag" style="-webkit-app-region: drag">E-spot Visualizerinator</a></div>
+      <span class="left"><a zf-open="menu"><img src="./assets/img/happy-32x32.png" alt=""/></a></span>
+      <span class="right">
+        <a href="#enter-fullscreen"><img zf-iconic="" icon="enlarge" size="small" class="iconic-color-dark"></a>
+        <a href="#leave-fullscreen"><img zf-iconic="" icon="shrink" size="small" class="iconic-color-dark"></a>
+        &nbsp;
+        <a href="#close"><img zf-iconic="" icon="circle-x" size="small" class="iconic-color-dark"></a>
+      </span>
+    </div>
+  </div>
+  <div class="grid-block scroll-section">
+    <div id="theContent" class="small-12 medium-12 large-12 grid-content">
+      <p>&nbsp;</p>
+      <h4>This app will display what is currently showing in all TFS and CMC E-spots.</h4>
+      <p>Use the <img src="./assets/img/happy-32x32.png" alt="" style="width:16px; height: auto;"/> in the upper left to select your query.</p>
+      <p>Remember to get latest in TFS for up to date info.</p>
+      <p>Node.js is required to run the CMC query. If you don't already have it installed, get it <a href="http://nodejs.org/dist/v0.10.38/x64/node-v0.10.38-x64.msi">here</a>.</p>
+    </div>
+  </div>
+
+
+  <div zf-panel="" id="settings" position="bottom">
+    <div class="grid-container">
+      <div class="grid-block" style="overflow: visible;">
+        <div class="small-12 medium-6 grid-content" style="overflow: visible;">
+          <h3>Settings</h3>
+          <label for="filesPath">Path to your StaticCMSContent/snippets</label>
+          <input id="filesPath" type="text"/>
+          <input id="winSettings" type="checkbox" checked/>
+          <label for="winSettings">Remember window size/position</label>
+          <br/>
+          <button id="saver" class="small" zf-close="settings">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./assets/js/app.js"></script>
+</body>
+</html>

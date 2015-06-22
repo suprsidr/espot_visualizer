@@ -1,0 +1,20 @@
+{
+  "name": "ESpot_Visualizer",
+  "productName": "E-spot Visualizer",
+  "main": "./index.html",
+  "description": "Walk directories to retrieve e-spot content",
+  "version": "0.1.0",
+  "repository": "n/a",
+  "window": {
+    "title": "E-spot Visualizer",
+    "icon": "./assets/img/happy-32x32.png",
+    "width": 900,
+    "height": 800,
+    "frame": false,
+    "toolbar": false
+  },
+  "devDependencies": {
+    "ibm_db": "0.0.9",
+    "walkr": "0.0.3"
+  }
+}
